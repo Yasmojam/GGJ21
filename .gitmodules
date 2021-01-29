@@ -1,0 +1,3 @@
+[submodule "GameJamAssets"]
+	path = GameJamAssets
+	url = https://github.com/FireRedNinja/GameJamAssets.git
