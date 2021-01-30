@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 41458eadb5b20db4597cf47e2e1be69f
+guid: 30cd34747cce5144c8251837abb70c60
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8790154677910664958
-    second: barrier_0
+      213: 1129897573523451287
+    second: bridge-barrier-left_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,30 +94,36 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: barrier_0
+      name: bridge-barrier-left_0
       rect:
         serializedVersion: 2
         x: 4
-        y: 36
+        y: 4
         width: 129
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 129
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -1.5, y: 32.5}
-        - {x: -64.5, y: 0.5}
-        - {x: -64.5, y: -0.5}
-        - {x: -1.5, y: -32.5}
-        - {x: 1.5, y: -32.5}
-        - {x: 64.5, y: -0.5}
-        - {x: 64.5, y: 0.5}
-        - {x: 1.5, y: 32.5}
+      - - {x: -2.5, y: -39.5}
+        - {x: -2.5, y: -41.5}
+        - {x: -1.5, y: -42.5}
+        - {x: 1.5, y: -42.5}
+        - {x: 64.5, y: -10.5}
+        - {x: 64.5, y: -7.5}
+        - {x: 61.5, y: -7.5}
+      - - {x: 1.5, y: 26.5}
+        - {x: -1.5, y: 26.5}
+        - {x: -64.5, y: -5.5}
+        - {x: -64.5, y: -8.5}
+        - {x: -61.5, y: -8.5}
+        - {x: 2.5, y: 23.5}
+        - {x: 2.5, y: 25.5}
       tessellationDetail: 0
       bones: []
-      spriteID: ef67a997b17ecf970800000000000000
-      internalID: 8790154677910664958
+      spriteID: 79de07e4bd33eaf00800000000000000
+      internalID: 1129897573523451287
       vertices: []
       indices: 
       edges: []

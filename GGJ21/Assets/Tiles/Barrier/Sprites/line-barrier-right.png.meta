@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 41458eadb5b20db4597cf47e2e1be69f
+guid: d931f84ef365bc04c9b4c31adc26ad05
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8790154677910664958
-    second: barrier_0
+      213: -8352856392858615661
+    second: line-barrier-right_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -94,30 +94,30 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: barrier_0
+      name: line-barrier-right_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 36
-        width: 129
-        height: 65
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 64
+        y: 66
+        width: 67
+        height: 35
+      alignment: 9
+      pivot: {x: 0.05970149, y: 0.057142857}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape:
-      - - {x: -1.5, y: 32.5}
-        - {x: -64.5, y: 0.5}
-        - {x: -64.5, y: -0.5}
-        - {x: -1.5, y: -32.5}
-        - {x: 1.5, y: -32.5}
-        - {x: 64.5, y: -0.5}
-        - {x: 64.5, y: 0.5}
-        - {x: 1.5, y: 32.5}
+      - - {x: -33.5, y: 16.5}
+        - {x: -33.5, y: 14.5}
+        - {x: 29.5, y: -17.5}
+        - {x: 31.5, y: -17.5}
+        - {x: 33.5, y: -15.5}
+        - {x: 33.5, y: -13.5}
+        - {x: -28.5, y: 17.5}
+        - {x: -31.5, y: 17.5}
       tessellationDetail: 0
       bones: []
-      spriteID: ef67a997b17ecf970800000000000000
-      internalID: 8790154677910664958
+      spriteID: 390cfc3bd51b41c80800000000000000
+      internalID: -8352856392858615661
       vertices: []
       indices: 
       edges: []
