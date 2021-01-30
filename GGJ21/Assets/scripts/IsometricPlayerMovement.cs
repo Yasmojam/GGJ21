@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class IsometricPlayerMovement : MonoBehaviour
@@ -25,7 +23,7 @@ public class IsometricPlayerMovement : MonoBehaviour
         Vector2 movement = inputVector * movementSpeed;
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
         rigidBody.MovePosition(newPos);
-    }  
+    }
 
 
 }
