@@ -19,11 +19,15 @@ public class PlayerSprites : MonoBehaviour
 
     void Update() {
 
-        float xInput = Input.GetAxis("Horizontal");
         float yInput = Input.GetAxis("Vertical");
+        float xInput = Input.GetAxis("Horizontal");
 
-        anim.SetFloat("xInput", xInput);
         anim.SetFloat("yInput", yInput);
+        if (yInput != 0f) {
+            anim.SetFloat("xInput", 0);
+        } else {
+            anim.SetFloat("xInput", xInput);
+        }
 
         if (xInput == 0 && yInput == 0) {
             anim.SetTrigger("Stop");
@@ -37,7 +41,7 @@ public class PlayerSprites : MonoBehaviour
         Vector3Int tilepos = worldGrid.WorldToCell(pos);
         Vector3 tileworldpos = worldGrid.CellToWorld(tilepos);
         Vector3 relativePos = pos - tileworldpos;
-        Debug.Log(relativePos.y);
+
         if (relativePos.y < 0.25)
             transform.position = new Vector3(transform.position.x, transform.position.y, groundLevel + bottomHalfZBoost);
         else
