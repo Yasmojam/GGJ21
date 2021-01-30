@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 535f8e525ff367c4ba67961e201a05ed, type: 3}
-  m_Name: PalmTile
+  m_Name: BushTile
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -35,7 +35,7 @@ MonoBehaviour:
   m_Flags: 1
   m_ColliderType: 1
   m_Sprites:
-  - {fileID: 2166462395316544013, guid: 7a943b8e1f32b1f4d9eecb5f4d27e939, type: 3}
-  - {fileID: 1591760690240502894, guid: 7a943b8e1f32b1f4d9eecb5f4d27e939, type: 3}
-  - {fileID: -8530452286072047831, guid: 7a943b8e1f32b1f4d9eecb5f4d27e939, type: 3}
-  - {fileID: 7029572629551836742, guid: 7a943b8e1f32b1f4d9eecb5f4d27e939, type: 3}
+  - {fileID: 6545382614753218560, guid: d1938f9985a75ad409c043e51234dba0, type: 3}
+  - {fileID: -2393253423863688536, guid: d1938f9985a75ad409c043e51234dba0, type: 3}
+  - {fileID: 4493076713092915932, guid: d1938f9985a75ad409c043e51234dba0, type: 3}
+  - {fileID: 7868427244287921197, guid: d1938f9985a75ad409c043e51234dba0, type: 3}
