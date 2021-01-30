@@ -25,5 +25,10 @@ public class IsometricPlayerMovement : MonoBehaviour
         rigidBody.MovePosition(newPos);
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Trigger collision");
+    }
+
 
 }

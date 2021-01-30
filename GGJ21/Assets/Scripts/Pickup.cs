@@ -16,34 +16,33 @@ public class Pickup : MonoBehaviour
     // Collision is other object
     private void OnTriggerEnter2D(Collider2D collision)
     {
+       
         if (collision.CompareTag("Player"))
         {
-            if (collision.CompareTag("Player"))
+            for (int i = 0; i < inventory.slots.Length; i++)
             {
-                for (int i = 0; i < inventory.slots.Length; i++)
+                slot = inventory.slots[i].GetComponent<Slots>();
+                if (slot.GetItemType() == null)
                 {
-                    slot = inventory.slots[i].GetComponent<Slots>();
-                    if (slot.GetItemType() == null)
-                    {
-                        // ITEM CAN BE ADDED TO INVENTORY SO MAKE THIS SLOT FULL
-                        Debug.Log("null to item");
-                        slot.SetItem(item.name);
-                        Instantiate(item, inventory.slots[i].transform, false); // graphic will spawn in the middle of inventory slot graphic (false because not world space)
-                        slot.AddItem(); // adds to count 
-                        Destroy(gameObject);
-                        break;
-                    }
-                    if (slot.GetItemType() == item.name)
-                    {
-                        Debug.Log("item already there");
-                        Instantiate(item, inventory.slots[i].transform, false); // graphic will spawn in the middle of inventory slot graphic (false because not world space)
-                        slot.AddItem(); // adds to count 
-                        Destroy(gameObject);
-                        break;
-                    }
-
+                    // ITEM CAN BE ADDED TO INVENTORY SO MAKE THIS SLOT FULL
+                    Debug.Log("null to item");
+                    slot.SetItem(item.name);
+                    Instantiate(item, inventory.slots[i].transform, false); // graphic will spawn in the middle of inventory slot graphic (false because not world space)
+                    slot.AddItem(); // adds to count 
+                    Destroy(gameObject);
+                    break;
                 }
+                if (slot.GetItemType() == item.name)
+                {
+                    Debug.Log("item already there");
+                    Instantiate(item, inventory.slots[i].transform, false); // graphic will spawn in the middle of inventory slot graphic (false because not world space)
+                    slot.AddItem(); // adds to count 
+                    Destroy(gameObject);
+                    break;
+                }
+
             }
         }
+       
     }
 }
