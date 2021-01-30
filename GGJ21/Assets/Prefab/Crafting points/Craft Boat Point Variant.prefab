@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 6766532292300207627, guid: b0c7fac6785c36248aac855e5ee6629b,
         type: 3}
       propertyPath: m_Name
-      value: Craft Big boat Point Variant
+      value: Craft Boat Point Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6766532292300207630, guid: b0c7fac6785c36248aac855e5ee6629b,
         type: 3}
@@ -95,7 +95,7 @@ PrefabInstance:
     - target: {fileID: 6766532292300207631, guid: b0c7fac6785c36248aac855e5ee6629b,
         type: 3}
       propertyPath: itemToCraft
-      value: Big boat
+      value: Boat
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0c7fac6785c36248aac855e5ee6629b, type: 3}

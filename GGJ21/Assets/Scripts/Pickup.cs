@@ -4,7 +4,7 @@ public class Pickup : MonoBehaviour
 {
     private Inventory inventory;
     private Slots slot;
-    public GameObject item;
+    public GameObject itemInSlot; // Axe, Dark Wood, Light Wood, Stone
 
     // Start is called before the first frame update
     void Start()
@@ -26,16 +26,16 @@ public class Pickup : MonoBehaviour
                 {
                     // ITEM CAN BE ADDED TO INVENTORY SO MAKE THIS SLOT FULL
                     Debug.Log("null to item");
-                    slot.SetItem(item.name);
-                    Instantiate(item, inventory.slots[i].transform, false); // graphic will spawn in the middle of inventory slot graphic (false because not world space)
+                    slot.SetItem(itemInSlot.name);
+                    Instantiate(itemInSlot, inventory.slots[i].transform, false); // graphic will spawn in the middle of inventory slot graphic (false because not world space)
                     slot.AddItem(); // adds to count 
                     Destroy(gameObject);
                     break;
                 }
-                if (slot.GetItemType() == item.name)
+                if (slot.GetItemType() == itemInSlot.name)
                 {
                     Debug.Log("item already there");
-                    Instantiate(item, inventory.slots[i].transform, false); // graphic will spawn in the middle of inventory slot graphic (false because not world space)
+                    Instantiate(itemInSlot, inventory.slots[i].transform, false); // graphic will spawn in the middle of inventory slot graphic (false because not world space)
                     slot.AddItem(); // adds to count 
                     Destroy(gameObject);
                     break;
