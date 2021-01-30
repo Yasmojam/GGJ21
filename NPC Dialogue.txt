@@ -1,0 +1,25 @@
+NPC 1: NO! The best way to build boats is with palm trees!
+NPC 2: Are you mad?! Palm trees are not strong enough to survive the open sea! We need Pine!
+NPC 1: But there is no PINE! Only Palm!
+NPC 2: We'll find some then!
+NPC 1: Where?! We're stuck on this island!!
+NPC 3: Guys? Where did rectangle NPC go? 
+NPCs 1+2: NOT NOW!
+
+
+
+
+
+Rect NPC: Hey, you. You're finally awake. You were trying to cross the border, right? Our plane went down... Are they still arguing back there?
+		: I can see some pine over there on the farthest islands... I would go out and get them myself but my rectangular body is failing me... I did make some mattocks for you to collect materials and left them on each island... don't ask me how I got there...
+        : If you complete each puzzle you get a mattock! You can use the wood and stones you pick up to navigate between islands to collect the pine
+		: Rafts to get between sets of islands require 5 pine planks, bridges between islands require 2 planks and 2 stones. And the big boat needs 15 Pine planks and 10 stones
+
+
+
+Rect NPC: You're back! Did you get everything wee need? Thank goodness, the others are just sitting there... screaming...
+
+NPCs 1+2+3: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+NPC 2: Wait... is that PINE?!?!
+NPC 1: We can finally leave!!
+NPC 3: Waheyyyyy
