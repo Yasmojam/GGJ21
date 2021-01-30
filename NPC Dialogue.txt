@@ -10,7 +10,7 @@ NPCs 1+2: NOT NOW!
 
 
 
-Rect NPC: Hey, you. You’re finally awake. You were trying to cross the border, right? Our plane went down... Are they still arguing back there?
+Rect NPC: Hey, you. You're finally awake. You were trying to cross the border, right? Our plane went down... Are they still arguing back there?
 		: I can see some pine over there on the farthest islands... I would go out and get them myself but my rectangular body is failing me... I did make some mattocks for you to collect materials and left them on each island... don't ask me how I got there...
         : If you complete each puzzle you get a mattock! You can use the wood and stones you pick up to navigate between islands to collect the pine
 		: Rafts to get between sets of islands require 5 pine planks, bridges between islands require 2 planks and 2 stones. And the big boat needs 15 Pine planks and 10 stones
