@@ -4,41 +4,21 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - BlockPuzzle
   - water
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Bushes
+    uniqueID: 1401348321
+    locked: 0
+  - name: Pushable Blocks
+    uniqueID: 3063510483
     locked: 0
