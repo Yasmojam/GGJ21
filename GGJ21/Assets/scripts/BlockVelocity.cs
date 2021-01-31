@@ -75,7 +75,6 @@ public class BlockVelocity : MonoBehaviour
 
         startPosition = transform.position;
         targetDestination = new Vector2(transform.position.x, transform.position.y) + blockMovement;
-
         targetDestination = SnapToGrid(targetDestination);
 
         Debug.Log(targetDestination);
