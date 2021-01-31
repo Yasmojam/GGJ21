@@ -145,3 +145,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneToLoad: Level 1
   audio: {fileID: 0}
+  canvas: {fileID: 0}
+  travelingDialogue: {fileID: 49025887112744741, guid: b6cf1bf6aff36e744b9e073c423ff859,
+    type: 3}
