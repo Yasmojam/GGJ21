@@ -8,8 +8,14 @@ public class FinishLevel : MonoBehaviour
     public string sceneToLoad;
     public AudioSource audio;
 
+    public GameObject canvas;
+
+    public GameObject travelingDialogue;
+    private GameObject travelingDialogueInstance;
+
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("Player")) {
+            travelingDialogueInstance = Instantiate(travelingDialogue, canvas.transform, false);
             if (audio) {
                 audio.Play();
                 StartCoroutine(LoadSceneAfterDelay());
