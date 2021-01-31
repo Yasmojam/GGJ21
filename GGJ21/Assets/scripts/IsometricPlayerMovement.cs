@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class IsometricPlayerMovement : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class IsometricPlayerMovement : MonoBehaviour
     Vector2 horizontalMove = new Vector2(2f, -1f);
     Rigidbody2D playerRigidBody;
     Vector2 inputVector;
+    public AudioSource step_audio;
 
     // Start is called before the first frame update
     void Start()

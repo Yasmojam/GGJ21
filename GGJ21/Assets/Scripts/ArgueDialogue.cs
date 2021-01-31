@@ -20,6 +20,10 @@ public class ArgueDialogue : MonoBehaviour
         "Rhombus and Triangle: NOT NOW!"
     };
     private int dialogueIndex = 0;
+    public AudioSource Square_MyAudioSource;
+    public AudioSource Triangle_MyAudioSource;
+    public AudioSource Rhobus_MyAudioSource;
+
 
     private void Update() {
         if ( Input.GetKeyDown(KeyCode.Space) ) {
@@ -41,6 +45,16 @@ public class ArgueDialogue : MonoBehaviour
     void DisplayNextDialogue() {
         if (dialogueIndex < dialogue.Count) {
             dialogueBoxInstance.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = dialogue[dialogueIndex];
+            if (dialogue[dialogueIndex].StartsWith("Rhombus")) {
+                Rhobus_MyAudioSource.Play();
+            } else if ( dialogue[dialogueIndex].StartsWith("Triangle") ) {
+                Triangle_MyAudioSource.Play();
+            } else if ( dialogue[dialogueIndex].StartsWith("Square") ) {
+                Square_MyAudioSource.Play();
+            } else if ( dialogue[dialogueIndex].StartsWith("Rhombus and Triangle") ) {
+                Rhobus_MyAudioSource.Play();
+                Triangle_MyAudioSource.Play();
+            }
         } else {
             Destroy(dialogueBoxInstance);
         }
