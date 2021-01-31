@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlockVelocity : MonoBehaviour
 {
-    int framesToMove = 90;
+    int framesToMove = 80;
 
 	Rigidbody2D rigidbody;
 
