@@ -18,7 +18,7 @@ public class RectangleDialogue : MonoBehaviour {
         "Rectangle: I did make some mattocks for you to collect materials and left them on each island...",
         "Rectangle: don't ask me how I got there...",
         "Rectangle: If you complete each puzzle you get a mattock! You can use the wood and stones you pick up to navigate between islands.",
-        "Rectangle: Rafts to get between sets of islands require 5 dark wood planks, bridges between islands require 2 planks and 2 stones. And the big boat needs 15 dark wood planks and 10 stones",
+        "Rectangle: Rafts to get between sets of islands require 5 dark wood planks, bridges between islands require 2 dark wood planks and 2 stones. And the big boat needs 15 dark wood planks and 10 stones",
 
     };
     private int dialogueIndex = 0;
