@@ -45,9 +45,6 @@ public class IsometricPlayerMovement : MonoBehaviour
             float inputVertical = Input.GetAxis("Vertical");
             Vector2 distance = currentPos - hitCurrentPos;
 
-            Debug.Log("Can move " + canMove);
-            Debug.Log("Distance " + distance);
-
             // +x, -y right
             // +x, +y above
             // -x, +y left
@@ -105,6 +102,12 @@ public class IsometricPlayerMovement : MonoBehaviour
                 }
             }
         }
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Trigger collision");
     }
 
     private void MoveBlock(BlockDirection direction, Collision2D hit) {

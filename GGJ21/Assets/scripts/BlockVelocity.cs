@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlockVelocity : MonoBehaviour
 {
-    int framesToMove = 75;  // 1.5secs
+    int framesToMove = 90;
 
 	Rigidbody2D rigidbody;
 
@@ -17,6 +17,7 @@ public class BlockVelocity : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        startPosition = SnapToGrid(transform.position);
         rigidbody = GetComponent<Rigidbody2D>();
     }
 
@@ -40,13 +41,32 @@ public class BlockVelocity : MonoBehaviour
             if (diff.magnitude < 0.05) {
                 rigidbody.MovePosition(targetDestination);
             } else {
-                rigidbody.MovePosition(startPosition);
+                CancelMove();
             }
-
+            startPosition = SnapToGrid(transform.position);
             moving = false;
         } else {
             rigidbody.velocity = Vector2.zero;
+            rigidbody.MovePosition(startPosition);
         }
+    }
+
+    void CancelMove() {
+        rigidbody.MovePosition(startPosition);
+        framesRemaining = 0;
+        moving = false;
+        rigidbody.velocity = Vector2.zero;
+    }
+
+    void OnCollisionEnter2D(Collision2D hit) {
+        if (!hit.gameObject.CompareTag("PlayerChar")) {
+            CancelMove();
+        }
+    }
+
+    Vector2 SnapToGrid(Vector2 v) {
+        Vector2 snapped = new Vector2(Mathf.Round(v.x * 2) / 2, Mathf.Round(v.y * 4) / 4);
+        return snapped + new Vector2(0, (1f - transform.localScale.y) / 4);
     }
 
     public void Move(Vector2 blockMovement) {
@@ -55,8 +75,7 @@ public class BlockVelocity : MonoBehaviour
 
         startPosition = transform.position;
         targetDestination = new Vector2(transform.position.x, transform.position.y) + blockMovement;
-
-        targetDestination = new Vector2(Mathf.Round(targetDestination.x * 2) / 2, Mathf.Round(targetDestination.y * 4) / 4);
+        targetDestination = SnapToGrid(targetDestination);
 
         Debug.Log(targetDestination);
         moving = true;
