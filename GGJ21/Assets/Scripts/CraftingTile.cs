@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.UI;
+using TMPro;
 
 public class CraftingTile : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class CraftingTile : MonoBehaviour
     public GameObject canvas;
 
     public GameObject recipeResult;
+
+    public GameObject invisibleWall;
 
     private GameObject promptInstance;
     private Inventory inventory;
@@ -31,11 +34,14 @@ public class CraftingTile : MonoBehaviour
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
 
+        raftRecipe.Add("Mattock", 1);
         raftRecipe.Add("Dark Wood", 5);
 
+        bridgeRecipe.Add("Mattock", 1);
         bridgeRecipe.Add("Dark Wood", 2);
         bridgeRecipe.Add("Stone", 2);
 
+        boatRecipe.Add("Mattock", 1);
         boatRecipe.Add("Light Wood", 15);
         boatRecipe.Add("Stone", 10);
 
@@ -62,6 +68,8 @@ public class CraftingTile : MonoBehaviour
                     }
                     Destroy(this.GetComponent<PolygonCollider2D>()); // Remove collider
                     recipeResult.gameObject.GetComponent<TilemapRenderer>().enabled = !recipeResult.gameObject.GetComponent<TilemapRenderer>().enabled;
+                    // Turn off invisible wall?
+                    invisibleWall.gameObject.GetComponent<Collider2D>().enabled = !recipeResult.gameObject.GetComponent<TilemapRenderer>().enabled; 
                 }
             }
         }
@@ -74,7 +82,7 @@ public class CraftingTile : MonoBehaviour
             Debug.Log("Triggered crafting");
             withinCraftTile = true;
             promptInstance = Instantiate(craftPrompt, canvas.transform);
-            promptInstance.transform.GetChild(1).GetComponent<Text>().text = itemToCraft;
+            promptInstance.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = itemToCraft;
 
             // Asign important recipe
         
@@ -99,9 +107,9 @@ public class CraftingTile : MonoBehaviour
             for (int i = 0; i < keysList.Count(); i++)
             {
                 // Item label
-                promptInstance.transform.GetChild(i+2).GetComponent<Text>().text = keysList[i];
+                promptInstance.transform.GetChild(i+2).GetComponent<TextMeshProUGUI>().text = keysList[i];
                 // Item quantity
-                promptInstance.transform.GetChild(i+4).GetComponent<Text>().text = "x " + promptRecipe[keysList[i]];
+                promptInstance.transform.GetChild(i+5).GetComponent<TextMeshProUGUI>().text = "x " + promptRecipe[keysList[i]];
 
                 }
             }
