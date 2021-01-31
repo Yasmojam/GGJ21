@@ -59,7 +59,7 @@ public class BlockVelocity : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D hit) {
-        if (!hit.gameObject.CompareTag("PlayerChar")) {
+        if (!hit.gameObject.CompareTag("Player")) {
             CancelMove();
         }
     }
@@ -75,7 +75,6 @@ public class BlockVelocity : MonoBehaviour
 
         startPosition = transform.position;
         targetDestination = new Vector2(transform.position.x, transform.position.y) + blockMovement;
-
         targetDestination = SnapToGrid(targetDestination);
 
         Debug.Log(targetDestination);
