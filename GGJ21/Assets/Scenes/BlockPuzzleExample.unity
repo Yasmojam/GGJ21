@@ -123,6 +123,65 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &16305048
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 342034610226713989, guid: 45e7be67510924fd98bbbae576fe66ee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.503
+      objectReference: {fileID: 0}
+    - target: {fileID: 342034610226713989, guid: 45e7be67510924fd98bbbae576fe66ee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.842
+      objectReference: {fileID: 0}
+    - target: {fileID: 3296813846303102623, guid: 45e7be67510924fd98bbbae576fe66ee,
+        type: 3}
+      propertyPath: framesToMove
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319685864142222837, guid: 45e7be67510924fd98bbbae576fe66ee,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319685864142222837, guid: 45e7be67510924fd98bbbae576fe66ee,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.491
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319685864142222837, guid: 45e7be67510924fd98bbbae576fe66ee,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.652
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319685864142222837, guid: 45e7be67510924fd98bbbae576fe66ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319685864142222837, guid: 45e7be67510924fd98bbbae576fe66ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5319685864142222837, guid: 45e7be67510924fd98bbbae576fe66ee,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999041277951700043, guid: 45e7be67510924fd98bbbae576fe66ee,
+        type: 3}
+      propertyPath: m_Name
+      value: Stone1x1 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 45e7be67510924fd98bbbae576fe66ee, type: 3}
 --- !u!1001 &617359098
 PrefabInstance:
   m_ObjectHideFlags: 0
