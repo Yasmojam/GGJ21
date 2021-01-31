@@ -114,7 +114,7 @@ public class IsometricPlayerMovement : MonoBehaviour
     {
         Debug.Log("Trigger collision");
             // Create prompt for push rock in canvas
-            if(collision.gameObject.tag == "BlockPuzzle") {
+            if(collision.gameObject.tag == "BlockPuzzle" && promptPushInstance == null) {
             promptPushInstance = Instantiate(pushPrompt, GameObject.FindGameObjectWithTag("Canvas").transform, false);
             }
     }
