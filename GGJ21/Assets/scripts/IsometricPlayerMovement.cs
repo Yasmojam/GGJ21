@@ -45,9 +45,6 @@ public class IsometricPlayerMovement : MonoBehaviour
             float inputVertical = Input.GetAxis("Vertical");
             Vector2 distance = currentPos - hitCurrentPos;
 
-            Debug.Log("Can move " + canMove);
-            Debug.Log("Distance " + distance);
-
             // +x, -y right
             // +x, +y above
             // -x, +y left
