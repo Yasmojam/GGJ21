@@ -7,6 +7,7 @@ public class Pickup : MonoBehaviour
     private Slot slot;
     public GameObject itemInSlot; // Axe, Dark Wood, Light Wood, Stone
     AudioSource pickupSound;
+    private bool destroyed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +20,9 @@ public class Pickup : MonoBehaviour
     // Collision is other object
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (destroyed) {
+            return;
+        }
        
         if (collision.CompareTag("Player"))
         {
@@ -33,7 +37,9 @@ public class Pickup : MonoBehaviour
                     Instantiate(itemInSlot, inventory.slots[i].transform, false); // graphic will spawn in the middle of inventory slot graphic (false because not world space)
                     slot.AddItem(); // adds to count 
                     pickupSound.Play();
-                    Destroy(gameObject);
+                    destroyed = true;
+                    GetComponent<SpriteRenderer>().enabled = false;
+                    Destroy(gameObject, 1f);
                     break;
                 }
                 if (slot.GetItemType() == itemInSlot.name)
@@ -41,7 +47,9 @@ public class Pickup : MonoBehaviour
                     Debug.Log("item already there");
                     slot.AddItem(); // adds to count 
                     pickupSound.Play();
-                    Destroy(gameObject);
+                    destroyed = true;
+                    GetComponent<SpriteRenderer>().enabled = false;
+                    Destroy(gameObject, 1f);
                     break;
                 }
 
