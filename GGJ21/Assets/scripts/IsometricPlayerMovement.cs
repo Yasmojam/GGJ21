@@ -10,8 +10,8 @@ public class IsometricPlayerMovement : MonoBehaviour
         Right
     }
 
-    float movementSpeed = 20f;
-    float playerMovementSpeed = 19f;
+    float movementSpeed = 41f;
+    float playerMovementSpeed = 40f;
     bool canMove = false;
     Vector2 verticalMove = new Vector2(2f, 1f);
     Vector2 horizontalMove = new Vector2(2f, -1f);
@@ -34,7 +34,6 @@ public class IsometricPlayerMovement : MonoBehaviour
         inputVector = Vector2.ClampMagnitude(inputVector, 1); // prevent diagonal movement being faster
         Vector2 movement = inputVector * playerMovementSpeed;
         playerRigidBody.velocity = movement * Time.fixedDeltaTime;
-
         canMove = Input.GetButton("Action");
     }
 
