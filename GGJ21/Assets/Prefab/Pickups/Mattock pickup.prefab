@@ -68,6 +68,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5280214138556833828, guid: a67cca3a43ca5574fbcdcff617cd4f7c,
         type: 3}
+    - target: {fileID: 7705641023022423105, guid: 04002967f9cd04a45a70a986af4b5935,
+        type: 3}
+      propertyPath: itemInSlot
+      value: 
+      objectReference: {fileID: 5280214138556833828, guid: a67cca3a43ca5574fbcdcff617cd4f7c,
+        type: 3}
     - target: {fileID: 7705641023022423107, guid: 04002967f9cd04a45a70a986af4b5935,
         type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y

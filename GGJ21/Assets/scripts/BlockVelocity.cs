@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlockVelocity : MonoBehaviour
 {
-    int framesToMove = 90;
+    int framesToMove = 80;
 
 	Rigidbody2D rigidbody;
 
@@ -59,7 +59,7 @@ public class BlockVelocity : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D hit) {
-        if (!hit.gameObject.CompareTag("PlayerChar")) {
+        if (!hit.gameObject.CompareTag("Player")) {
             CancelMove();
         }
     }

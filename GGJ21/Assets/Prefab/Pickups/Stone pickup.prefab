@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3080369669374145518}
   - component: {fileID: 3080369669374145519}
   m_Layer: 0
-  m_Name: Rock pickup
+  m_Name: Stone pickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -102,7 +102,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.251938}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
@@ -145,4 +145,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e488bd72840f69a42b89247656b7cae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 3412086675780065977, guid: c2f3b6d3c1abcfa44b27911d3784da93, type: 3}
+  itemInSlot: {fileID: 3412086675780065977, guid: c2f3b6d3c1abcfa44b27911d3784da93,
+    type: 3}

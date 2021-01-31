@@ -6,7 +6,11 @@ public class ShapePuzzleChecker : MonoBehaviour
 {
 
 	int triggeredCount;
-	int counterGoal = 7;
+	public int counterGoal = 7;
+    bool rewardsGiven = false;
+    public AudioSource audio;
+
+    public List<GameObject> rewards;
 
     // Start is called before the first frame update
     void Start()
@@ -17,9 +21,15 @@ public class ShapePuzzleChecker : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    	if(triggeredCount == counterGoal) {
-    		// TODO: Trigger item reward script method here
+    	if(triggeredCount == counterGoal && !rewardsGiven) {
+            rewardsGiven = true;
     		Debug.Log("WIN");
+
+            audio.Play();
+
+            foreach (GameObject reward in rewards) {
+                reward.SetActive(true);
+            }
     	}
     }
 
