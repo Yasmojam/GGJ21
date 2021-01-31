@@ -1,15 +1,18 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Pickup : MonoBehaviour
 {
     private Inventory inventory;
     private Slot slot;
     public GameObject itemInSlot; // Axe, Dark Wood, Light Wood, Stone
+    AudioSource pickupSound;
 
     // Start is called before the first frame update
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        pickupSound = GetComponent<AudioSource>();
     }
 
 
@@ -29,6 +32,7 @@ public class Pickup : MonoBehaviour
                     slot.SetItemType(itemInSlot.name);
                     Instantiate(itemInSlot, inventory.slots[i].transform, false); // graphic will spawn in the middle of inventory slot graphic (false because not world space)
                     slot.AddItem(); // adds to count 
+                    pickupSound.Play();
                     Destroy(gameObject);
                     break;
                 }
@@ -36,6 +40,7 @@ public class Pickup : MonoBehaviour
                 {
                     Debug.Log("item already there");
                     slot.AddItem(); // adds to count 
+                    pickupSound.Play();
                     Destroy(gameObject);
                     break;
                 }
