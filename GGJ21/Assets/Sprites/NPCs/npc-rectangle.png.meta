@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: bf8d4685140e43d4790454ae88a16ff9
+guid: 3d290e8607b5549faaa3f93b510935ca
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8151687979706478534
-    second: player-4_0
+      213: 1876488313707197474
+    second: npc-rectangle_0
   - first:
-      213: -4145589406445413206
-    second: player-4_1
+      213: -6113921572497776712
+    second: npc-rectangle_1
   - first:
-      213: 1966374783136231486
-    second: player-4_2
+      213: 5741515889554654927
+    second: npc-rectangle_2
   - first:
-      213: -4040015362186251250
-    second: player-4_3
+      213: 6824176466644990791
+    second: npc-rectangle_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -103,85 +103,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player-4_0
+      name: npc-rectangle_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 5
+        x: 4
+        y: 10
         width: 49
-        height: 68
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 139
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cfe93e270d902170800000000000000
-      internalID: 8151687979706478534
+      spriteID: 22470b3ed20aa0a10800000000000000
+      internalID: 1876488313707197474
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-4_1
+      name: npc-rectangle_1
       rect:
         serializedVersion: 2
-        x: 73
-        y: 5
+        x: 61
+        y: 10
         width: 49
-        height: 68
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 139
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aacd23c2668e776c0800000000000000
-      internalID: -4145589406445413206
+      spriteID: 8bf1ca609bcf62ba0800000000000000
+      internalID: -6113921572497776712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-4_2
+      name: npc-rectangle_2
       rect:
         serializedVersion: 2
-        x: 138
-        y: 5
+        x: 118
+        y: 10
         width: 49
-        height: 68
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 139
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e30fe1c6277f94b10800000000000000
-      internalID: 1966374783136231486
+      spriteID: fc68a2d1846fdaf40800000000000000
+      internalID: 5741515889554654927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-4_3
+      name: npc-rectangle_3
       rect:
         serializedVersion: 2
-        x: 203
-        y: 5
+        x: 175
+        y: 10
         width: 49
-        height: 68
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 139
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0474c9de6bfee7c0800000000000000
-      internalID: -4040015362186251250
+      spriteID: 74b74f2275854be50800000000000000
+      internalID: 6824176466644990791
       vertices: []
       indices: 
       edges: []

@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: bf8d4685140e43d4790454ae88a16ff9
+guid: 87cd6de8128f4455093bdadba8504b46
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8151687979706478534
-    second: player-4_0
+      213: 1049195067826617380
+    second: npc-rhombus_0
   - first:
-      213: -4145589406445413206
-    second: player-4_1
+      213: 3159041079498493515
+    second: npc-rhombus_1
   - first:
-      213: 1966374783136231486
-    second: player-4_2
+      213: 8055465440976075299
+    second: npc-rhombus_2
   - first:
-      213: -4040015362186251250
-    second: player-4_3
+      213: 520080445597395587
+    second: npc-rhombus_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -44,7 +44,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -103,85 +103,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: player-4_0
+      name: npc-rhombus_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 5
-        width: 49
-        height: 68
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 4
+        y: 8
+        width: 41
+        height: 71
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6cfe93e270d902170800000000000000
-      internalID: 8151687979706478534
+      spriteID: 42cb5e5fa5d7f8e00800000000000000
+      internalID: 1049195067826617380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-4_1
+      name: npc-rhombus_1
       rect:
         serializedVersion: 2
-        x: 73
-        y: 5
-        width: 49
-        height: 68
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 53
+        y: 8
+        width: 41
+        height: 71
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aacd23c2668e776c0800000000000000
-      internalID: -4145589406445413206
+      spriteID: b4ecf5edf1b27db20800000000000000
+      internalID: 3159041079498493515
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-4_2
+      name: npc-rhombus_2
       rect:
         serializedVersion: 2
-        x: 138
-        y: 5
-        width: 49
-        height: 68
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 102
+        y: 8
+        width: 41
+        height: 71
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e30fe1c6277f94b10800000000000000
-      internalID: 1966374783136231486
+      spriteID: 32a70dd8323cacf60800000000000000
+      internalID: 8055465440976075299
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: player-4_3
+      name: npc-rhombus_3
       rect:
         serializedVersion: 2
-        x: 203
-        y: 5
-        width: 49
-        height: 68
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 151
+        y: 8
+        width: 41
+        height: 71
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0474c9de6bfee7c0800000000000000
-      internalID: -4040015362186251250
+      spriteID: 38aa576e862b73700800000000000000
+      internalID: 520080445597395587
       vertices: []
       indices: 
       edges: []

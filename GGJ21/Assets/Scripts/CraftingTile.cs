@@ -32,7 +32,7 @@ public class CraftingTile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        inventory = GameObject.FindGameObjectWithTag("PlayerChar").GetComponent<Inventory>();
 
         raftRecipe.Add("Mattock", 1);
         raftRecipe.Add("Dark Wood", 5);
