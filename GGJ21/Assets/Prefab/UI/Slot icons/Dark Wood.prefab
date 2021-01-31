@@ -11,7 +11,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2166462395316544013, guid: 7a943b8e1f32b1f4d9eecb5f4d27e939,
+      objectReference: {fileID: -5728268406822174567, guid: e6ead0dc9f02e354794101cf4dcf7be0,
         type: 3}
     - target: {fileID: 918595533779233386, guid: a67cca3a43ca5574fbcdcff617cd4f7c,
         type: 3}
@@ -121,7 +121,7 @@ PrefabInstance:
     - target: {fileID: 5280214138556833828, guid: a67cca3a43ca5574fbcdcff617cd4f7c,
         type: 3}
       propertyPath: m_Name
-      value: heavy wood slot icon
+      value: Dark Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a67cca3a43ca5574fbcdcff617cd4f7c, type: 3}

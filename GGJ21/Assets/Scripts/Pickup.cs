@@ -3,7 +3,7 @@ using UnityEngine;
 public class Pickup : MonoBehaviour
 {
     private Inventory inventory;
-    private Slots slot;
+    private Slot slot;
     public GameObject itemInSlot; // Axe, Dark Wood, Light Wood, Stone
 
     // Start is called before the first frame update
@@ -21,12 +21,12 @@ public class Pickup : MonoBehaviour
         {
             for (int i = 0; i < inventory.slots.Length; i++)
             {
-                slot = inventory.slots[i].GetComponent<Slots>();
+                slot = inventory.slots[i].GetComponent<Slot>();
                 if (slot.GetItemType() == null)
                 {
                     // ITEM CAN BE ADDED TO INVENTORY SO MAKE THIS SLOT FULL
                     Debug.Log("null to item");
-                    slot.SetItem(itemInSlot.name);
+                    slot.SetItemType(itemInSlot.name);
                     Instantiate(itemInSlot, inventory.slots[i].transform, false); // graphic will spawn in the middle of inventory slot graphic (false because not world space)
                     slot.AddItem(); // adds to count 
                     Destroy(gameObject);
@@ -35,7 +35,6 @@ public class Pickup : MonoBehaviour
                 if (slot.GetItemType() == itemInSlot.name)
                 {
                     Debug.Log("item already there");
-                    Instantiate(itemInSlot, inventory.slots[i].transform, false); // graphic will spawn in the middle of inventory slot graphic (false because not world space)
                     slot.AddItem(); // adds to count 
                     Destroy(gameObject);
                     break;

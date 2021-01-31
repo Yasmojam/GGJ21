@@ -109,13 +109,12 @@ public class IsometricPlayerMovement : MonoBehaviour
         }
     }
 
-<<<<<<< HEAD
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Trigger collision");
     }
 
-=======
     private void MoveBlock(BlockDirection direction, Collision2D hit) {
         Vector2 blockMovement;
         Vector2 blockInputVector = new Vector2(0, 0);
@@ -141,6 +140,5 @@ public class IsometricPlayerMovement : MonoBehaviour
         BlockVelocity blockScript = hit.gameObject.GetComponent<BlockVelocity>();
         blockScript.Move(blockMovement);
     }
->>>>>>> 45121216358f0159ddfc29b5169de01050916e60
 
 }

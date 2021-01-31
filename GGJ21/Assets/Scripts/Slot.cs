@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Slots : MonoBehaviour
+public class Slot : MonoBehaviour
 {
     public int count = 0;
     private Text countRender;
@@ -29,16 +29,33 @@ public class Slots : MonoBehaviour
         }
     }
 
-    public void SetItem(string itemType)
+    public void SetItemType(string itemType)
     {
         this.itemType = itemType;
         Debug.Log(itemType);
     }
 
-    public void EmptyItemSlot()
+
+    public void RemoveItemsFromSlot(int numberToRemove)
     {
-        this.itemType = null;
-        count = 0;
+        if (numberToRemove <= count) {
+            count -= numberToRemove;
+            if (count < 2)
+            {
+               countRender.text = "";
+
+                if (count < 1)
+                {
+                    this.itemType = null;
+                }
+            }
+            else
+            {
+                countRender.text = count.ToString();
+            }
+            
+        }
+        
     }
 
     public string GetItemType()

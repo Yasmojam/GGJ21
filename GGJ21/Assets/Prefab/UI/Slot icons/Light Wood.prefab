@@ -11,7 +11,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -8667466294985060184, guid: 2a01ddd89cff80c41b908b987f6fa272,
+      objectReference: {fileID: -7688691844262916654, guid: 7a0bf622c8cf105428e309f23319acf2,
         type: 3}
     - target: {fileID: 918595533779233386, guid: a67cca3a43ca5574fbcdcff617cd4f7c,
         type: 3}
@@ -121,7 +121,7 @@ PrefabInstance:
     - target: {fileID: 5280214138556833828, guid: a67cca3a43ca5574fbcdcff617cd4f7c,
         type: 3}
       propertyPath: m_Name
-      value: light wood slot icon
+      value: Light Wood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a67cca3a43ca5574fbcdcff617cd4f7c, type: 3}
