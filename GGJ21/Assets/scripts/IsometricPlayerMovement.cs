@@ -1,8 +1,8 @@
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class IsometricPlayerMovement : MonoBehaviour
 {
+    public GameObject pushPrompt;
 
     enum BlockDirection {
         Up,
@@ -17,7 +17,9 @@ public class IsometricPlayerMovement : MonoBehaviour
     Vector2 horizontalMove = new Vector2(2f, -1f);
     Rigidbody2D playerRigidBody;
     Vector2 inputVector;
-    public AudioSource step_audio;
+    private GameObject promptPushInstance;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +48,7 @@ public class IsometricPlayerMovement : MonoBehaviour
             float inputHorizontal = Input.GetAxis("Horizontal");
             float inputVertical = Input.GetAxis("Vertical");
             Vector2 distance = currentPos - hitCurrentPos;
+
 
             // +x, -y right
             // +x, +y above
@@ -107,9 +110,13 @@ public class IsometricPlayerMovement : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Trigger collision");
+            // Create prompt for push rock in canvas
+            if(collision.gameObject.tag == "BlockPuzzle") {
+            promptPushInstance = Instantiate(pushPrompt, GameObject.FindGameObjectWithTag("Canvas").transform, false);
+            }
     }
 
     private void MoveBlock(BlockDirection direction, Collision2D hit) {
@@ -134,6 +141,13 @@ public class IsometricPlayerMovement : MonoBehaviour
         }
         BlockVelocity blockScript = hit.gameObject.GetComponent<BlockVelocity>();
         blockScript.Move(blockInputVector);
+    }
+
+    private void OnCollisionExit2D(Collision2D collision){
+        Debug.Log("Leaving trigger zone");
+        if(collision.gameObject.tag == "BlockPuzzle"){
+            Destroy(promptPushInstance);
+        }
     }
 
 }
