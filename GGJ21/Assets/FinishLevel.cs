@@ -9,12 +9,15 @@ public class FinishLevel : MonoBehaviour
     public AudioSource audio;
 
     void OnTriggerEnter2D(Collider2D collision) {
-        if (audio) {
-            audio.Play();
-            StartCoroutine(LoadSceneAfterDelay());
-        } else {
-            SceneManager.LoadScene(sceneToLoad);
+        if (collision.gameObject.CompareTag("Player")) {
+            if (audio) {
+                audio.Play();
+                StartCoroutine(LoadSceneAfterDelay());
+            } else {
+                SceneManager.LoadScene(sceneToLoad);
+            }
         }
+
     }
 
 
