@@ -11,7 +11,7 @@ public class IsometricPlayerMovement : MonoBehaviour
         Right
     }
 
-    float playerMovementSpeed = 40f;
+    float playerMovementSpeed = 55f;
     bool canMove = false;
     Vector2 verticalMove = new Vector2(2f, 1f);
     Vector2 horizontalMove = new Vector2(2f, -1f);
