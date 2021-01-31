@@ -8,13 +8,24 @@ public class Pickup : MonoBehaviour
     public GameObject itemInSlot; // Axe, Dark Wood, Light Wood, Stone
     AudioSource pickupSound;
     private bool destroyed = false;
+    float yPos;
+    float offset;
+    float bobIntensity = .02f;
 
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
         pickupSound = GetComponent<AudioSource>();
+        offset = Random.Range(0f, 360f);
+        yPos = transform.position.y;
     }
+
+    private void FixedUpdate() {
+
+        Vector3 pos = transform.position;
+        transform.position = new Vector3(pos.x, yPos + Mathf.Cos(4 * (Time.time + offset)) * bobIntensity, pos.z);
+    }
+
 
 
     // Collision is other object
