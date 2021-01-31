@@ -71,28 +71,28 @@ PrefabInstance:
     - target: {fileID: 7705641023022423107, guid: 04002967f9cd04a45a70a986af4b5935,
         type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.25
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7705641023022423107, guid: 04002967f9cd04a45a70a986af4b5935,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1
+      value: 0.5968992
       objectReference: {fileID: 0}
     - target: {fileID: 7705641023022423107, guid: 04002967f9cd04a45a70a986af4b5935,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 0.36434108
       objectReference: {fileID: 0}
     - target: {fileID: 7705641023022423108, guid: 04002967f9cd04a45a70a986af4b5935,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 4360390788417139489, guid: 7a7ffa07219739b4fa2a96de01dd8cda,
+      objectReference: {fileID: -105659476075577944, guid: f9660768e91395447acc8dd0474fea0d,
         type: 3}
     - target: {fileID: 7705641023022423119, guid: 04002967f9cd04a45a70a986af4b5935,
         type: 3}
       propertyPath: m_Name
-      value: Axe pickup
+      value: Mattock pickup
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04002967f9cd04a45a70a986af4b5935, type: 3}

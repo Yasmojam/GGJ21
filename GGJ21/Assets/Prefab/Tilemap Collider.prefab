@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1308706428921659398}
   - component: {fileID: 1308706428921659401}
   - component: {fileID: 1308706428921659400}
+  - component: {fileID: 7119398901863819027}
   m_Layer: 0
   m_Name: Tilemap Collider
   m_TagString: Untagged
@@ -146,7 +147,7 @@ TilemapRenderer:
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 3
-  m_Mode: 0
+  m_Mode: 1
   m_DetectChunkCullingBounds: 0
   m_MaskInteraction: 0
 --- !u!19719996 &1308706428921659398
@@ -210,3 +211,15 @@ CompositeCollider2D:
     m_Paths: []
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &7119398901863819027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308706428921659402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375584cbe35b9544e80ee34d363bcebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
