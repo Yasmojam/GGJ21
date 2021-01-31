@@ -121,7 +121,7 @@ PrefabInstance:
     - target: {fileID: 5280214138556833828, guid: a67cca3a43ca5574fbcdcff617cd4f7c,
         type: 3}
       propertyPath: m_Name
-      value: rock slot icon
+      value: Stone
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a67cca3a43ca5574fbcdcff617cd4f7c, type: 3}
