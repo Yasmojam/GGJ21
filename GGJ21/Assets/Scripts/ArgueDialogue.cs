@@ -10,6 +10,8 @@ public class ArgueDialogue : MonoBehaviour
     public GameObject dialogueBox;
     private GameObject dialogueBoxInstance;
     public GameObject canvas;
+    public GameObject invisibleWall;
+
     private List<string> dialogue = new List<string> {
         "Rhombus: NO! The best way to build boats is with palm trees!",
         "Triangle: Are you mad?! Palm trees are not strong enough to survive the open sea! We need Pine!",
@@ -56,6 +58,8 @@ public class ArgueDialogue : MonoBehaviour
                 Triangle_MyAudioSource.Play();
             }
         } else {
+            // Turn off invisible wall?
+            invisibleWall.gameObject.GetComponent<Collider2D>().enabled = false; 
             Destroy(dialogueBoxInstance);
         }
         dialogueIndex++;
