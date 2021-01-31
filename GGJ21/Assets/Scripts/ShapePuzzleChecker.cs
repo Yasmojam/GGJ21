@@ -23,7 +23,6 @@ public class ShapePuzzleChecker : MonoBehaviour
     {
     	if(triggeredCount == counterGoal && !rewardsGiven) {
             rewardsGiven = true;
-    		Debug.Log("WIN");
 
             audio.Play();
 

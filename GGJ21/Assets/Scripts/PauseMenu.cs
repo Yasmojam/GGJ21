@@ -49,4 +49,7 @@ public class PauseMenu : MonoBehaviour
     public void SetMusicVolume(float volume) {
         audioMixer.SetFloat("music", volume);
     }
+    public void SetSuccessSoundVolume(float volume) {
+        audioMixer.SetFloat("success", volume);
+    }
 }
