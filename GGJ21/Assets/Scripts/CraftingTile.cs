@@ -14,6 +14,8 @@ public class CraftingTile : MonoBehaviour
 
     public GameObject recipeResult;
 
+    public GameObject invisibleWall;
+
     private GameObject promptInstance;
     private Inventory inventory;
     private Slot slot;
@@ -66,6 +68,8 @@ public class CraftingTile : MonoBehaviour
                     }
                     Destroy(this.GetComponent<PolygonCollider2D>()); // Remove collider
                     recipeResult.gameObject.GetComponent<TilemapRenderer>().enabled = !recipeResult.gameObject.GetComponent<TilemapRenderer>().enabled;
+                    // Turn off invisible wall?
+                    invisibleWall.gameObject.GetComponent<Collider2D>().enabled = !recipeResult.gameObject.GetComponent<TilemapRenderer>().enabled; 
                 }
             }
         }
