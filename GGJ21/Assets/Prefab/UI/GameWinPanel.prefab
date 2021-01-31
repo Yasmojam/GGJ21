@@ -121,10 +121,10 @@ RectTransform:
   m_Father: {fileID: 70290922016213179}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 724.98, y: -267.38882}
+  m_SizeDelta: {x: 1449.96, y: 534.77765}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3811939727533846292
 CanvasRenderer:
@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 4993604925088915845}
   - component: {fileID: 1291885853231251968}
   - component: {fileID: 4213478479545696497}
+  - component: {fileID: 8765929345865132810}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -327,6 +328,18 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &8765929345865132810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6836684502998871537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa4a93336ad814b43acc5473e595ca2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8326437211810897526
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,10 +374,10 @@ RectTransform:
   m_Father: {fileID: 70290922016213179}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 724.98, y: -653.22644}
+  m_SizeDelta: {x: 1449.96, y: 236.89764}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3484018018618014014
 CanvasRenderer:

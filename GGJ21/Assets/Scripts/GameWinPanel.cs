@@ -6,6 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameWinPanel : MonoBehaviour
 {
     public void PlayAgain() {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }
