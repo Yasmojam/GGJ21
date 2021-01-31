@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class IsometricPlayerMovement : MonoBehaviour
 {
+    public GameObject pushPrompt;
 
     enum BlockDirection {
         Up,
@@ -10,13 +11,15 @@ public class IsometricPlayerMovement : MonoBehaviour
         Right
     }
 
-    float movementSpeed = 20f;
-    float playerMovementSpeed = 19f;
+    float playerMovementSpeed = 40f;
     bool canMove = false;
     Vector2 verticalMove = new Vector2(2f, 1f);
     Vector2 horizontalMove = new Vector2(2f, -1f);
     Rigidbody2D playerRigidBody;
     Vector2 inputVector;
+    private GameObject promptPushInstance;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +37,6 @@ public class IsometricPlayerMovement : MonoBehaviour
         inputVector = Vector2.ClampMagnitude(inputVector, 1); // prevent diagonal movement being faster
         Vector2 movement = inputVector * playerMovementSpeed;
         playerRigidBody.velocity = movement * Time.fixedDeltaTime;
-
         canMove = Input.GetButton("Action");
     }
 
@@ -47,8 +49,6 @@ public class IsometricPlayerMovement : MonoBehaviour
             float inputVertical = Input.GetAxis("Vertical");
             Vector2 distance = currentPos - hitCurrentPos;
 
-            Debug.Log("Can move " + canMove);
-            Debug.Log("Distance " + distance);
 
             // +x, -y right
             // +x, +y above
@@ -61,9 +61,9 @@ public class IsometricPlayerMovement : MonoBehaviour
                     // Right of stone
 
                     // Moving right
-                    if(inputHorizontal > 0 && inputVertical == 0) {
+                    /*if(inputHorizontal > 0 && inputVertical == 0) {
                         MoveBlock(BlockDirection.Right, hit);
-                    }
+                    }*/
                     // Moving left
                     if(inputHorizontal < 0 && inputVertical == 0) {
                         MoveBlock(BlockDirection.Left, hit);
@@ -73,9 +73,9 @@ public class IsometricPlayerMovement : MonoBehaviour
                     // Above stone
 
                     // Moving up
-                    if(inputHorizontal == 0 && inputVertical > 0) {
+                    /*if(inputHorizontal == 0 && inputVertical > 0) {
                         MoveBlock(BlockDirection.Up, hit);
-                    }
+                    }*/
                     // Moving down
                     if(inputHorizontal == 0 && inputVertical < 0) {
                         MoveBlock(BlockDirection.Down, hit);
@@ -89,30 +89,34 @@ public class IsometricPlayerMovement : MonoBehaviour
                         MoveBlock(BlockDirection.Right, hit);
                     }
                     // Moving left
-                    if(inputHorizontal < 0 && inputVertical == 0) {
+                    /*if(inputHorizontal < 0 && inputVertical == 0) {
                         MoveBlock(BlockDirection.Left, hit);
-                    }
+                    }*/
                 }
                 else if(distance.x < 0 && distance.y < 0) {
-                    // Above stone
+                    // Below stone
 
                     // Moving up
-                    if(inputHorizontal == 0 && inputVertical > 0) {
+                    if (inputHorizontal == 0 && inputVertical > 0) {
                         MoveBlock(BlockDirection.Up, hit);
                     }
                     // Moving down
-                    if(inputHorizontal == 0 && inputVertical < 0) {
+                    /*if (inputHorizontal == 0 && inputVertical < 0) {
                         MoveBlock(BlockDirection.Down, hit);
-                    }
+                    }*/
                 }
             }
         }
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Trigger collision");
+            // Create prompt for push rock in canvas
+            if(collision.gameObject.tag == "BlockPuzzle") {
+            promptPushInstance = Instantiate(pushPrompt, GameObject.FindGameObjectWithTag("Canvas").transform, false);
+            }
     }
 
     private void MoveBlock(BlockDirection direction, Collision2D hit) {
@@ -120,25 +124,30 @@ public class IsometricPlayerMovement : MonoBehaviour
         Vector2 blockInputVector = new Vector2(0, 0);
         switch(direction) {
             case BlockDirection.Up:
-                blockInputVector = new Vector2(2f, 1f);
+                blockInputVector = new Vector2(.5f, .25f);
                 break;
             case BlockDirection.Down:
-                blockInputVector = new Vector2(-2f, -1f);
+                blockInputVector = new Vector2(-.5f, -.25f);
                 break;
             case BlockDirection.Left:
-                blockInputVector = new Vector2(-2f, 1f);
+                blockInputVector = new Vector2(-.5f, .25f);
                 break;
             case BlockDirection.Right:
-                blockInputVector = new Vector2(2f, -1f);
+                blockInputVector = new Vector2(.5f, -.25f);
                 break;
             default:
                 Debug.Log("No direction given");
                 break;
         }
-        blockInputVector = Vector2.ClampMagnitude(blockInputVector, 1); // prevent diagonal movement being faster
-        blockMovement = blockInputVector * movementSpeed;
         BlockVelocity blockScript = hit.gameObject.GetComponent<BlockVelocity>();
-        blockScript.Move(blockMovement);
+        blockScript.Move(blockInputVector);
+    }
+
+    private void OnCollisionExit2D(Collision2D collision){
+        Debug.Log("Leaving trigger zone");
+        if(collision.gameObject.tag == "BlockPuzzle"){
+            Destroy(promptPushInstance);
+        }
     }
 
 }

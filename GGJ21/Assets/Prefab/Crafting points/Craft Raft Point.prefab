@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6766532292300207630}
   - component: {fileID: 6766532292300207625}
   - component: {fileID: 6766532292300207631}
+  - component: {fileID: 2741934651952842715}
   m_Layer: 0
   m_Name: Craft Raft Point
   m_TagString: Untagged
@@ -134,3 +135,17 @@ MonoBehaviour:
   craftPrompt: {fileID: 3341399377765713958, guid: 9d0c4872395d29a47b3a34b87d955841,
     type: 3}
   canvas: {fileID: 0}
+  recipeResult: {fileID: 0}
+  invisibleWall: {fileID: 0}
+--- !u!114 &2741934651952842715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6766532292300207627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375584cbe35b9544e80ee34d363bcebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

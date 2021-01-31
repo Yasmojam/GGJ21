@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - BlockPuzzle
+  - water
+  - PlayerChar
+  - Canvas
   layers:
   - Default
   - TransparentFX
@@ -41,6 +44,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Shape Puzzle Trigger Zones
+    uniqueID: 1835949663
     locked: 0
   - name: Bushes
     uniqueID: 1401348321
