@@ -33,7 +33,7 @@ public class RectangleDialogue : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if ( collision.CompareTag("PlayerChar") && !hasHeardDialogue ) {
+        if ( collision.CompareTag("Player") && !hasHeardDialogue ) {
             dialogueBoxInstance = Instantiate(dialogueBox, canvas.transform, false);
             dialogueVisible = true;
             hasHeardDialogue = true;
