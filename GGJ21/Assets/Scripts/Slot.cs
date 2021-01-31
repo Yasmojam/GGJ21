@@ -1,17 +1,18 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Slot : MonoBehaviour
 {
     public int count = 0;
-    private Text countRender;
+    private TextMeshProUGUI countRender;
     public bool isFull;
     private string itemType = null;
 
     private void Start()
     {
-        countRender = this.gameObject.transform.GetChild(0).gameObject.GetComponent<Text>();
+        countRender = this.gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>();
     }
 
 
