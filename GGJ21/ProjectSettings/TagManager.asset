@@ -7,6 +7,7 @@ TagManager:
   - BlockPuzzle
   - water
   - PlayerChar
+  - Canvas
   layers:
   - Default
   - TransparentFX

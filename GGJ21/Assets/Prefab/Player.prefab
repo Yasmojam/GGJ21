@@ -138,6 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d567783bb73ca934a93fde649e5760c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pushPrompt: {fileID: 5828839077730850415, guid: f795b12089222d447b0cd7ac01741f78,
+    type: 3}
 --- !u!114 &2705997252096783457
 MonoBehaviour:
   m_ObjectHideFlags: 0
