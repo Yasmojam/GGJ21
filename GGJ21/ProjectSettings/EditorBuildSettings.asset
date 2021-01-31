@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/YasminTest.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Start Screen.unity
+    guid: 98c7c43b1446d624ab12d53d8ad62e59
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: 9cdbd9c1dec3f40bcb7af1fc273f621e
   m_configObjects: {}
