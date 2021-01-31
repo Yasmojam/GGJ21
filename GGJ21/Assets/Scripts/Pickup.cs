@@ -5,6 +5,7 @@ public class Pickup : MonoBehaviour
     private Inventory inventory;
     private Slots slot;
     public GameObject item;
+    public AudioSource pickupSound;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,8 @@ public class Pickup : MonoBehaviour
                         Debug.Log("null to item");
                         slot.SetItem(item.name);
                         Instantiate(item, inventory.slots[i].transform, false); // graphic will spawn in the middle of inventory slot graphic (false because not world space)
-                        slot.AddItem(); // adds to count 
+                        slot.AddItem(); // adds to count
+                        pickupSound.Play();
                         Destroy(gameObject);
                         break;
                     }
@@ -38,6 +40,7 @@ public class Pickup : MonoBehaviour
                         Debug.Log("item already there");
                         Instantiate(item, inventory.slots[i].transform, false); // graphic will spawn in the middle of inventory slot graphic (false because not world space)
                         slot.AddItem(); // adds to count 
+                        pickupSound.Play();
                         Destroy(gameObject);
                         break;
                     }
